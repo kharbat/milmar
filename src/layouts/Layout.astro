@@ -6,18 +6,23 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title: string;
   description?: string;
+  hideFooter?: boolean;
+  lang?: 'en' | 'es' | 'ar';
 }
 
-const { title, description = "Milmar Ramirez - Emmy Award-Winning Meteorologist, Scrum Master, and Educator" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const { title, description = "Milmar Ramirez - Emmy Award-Winning Meteorologist, Scrum Master, and Educator", hideFooter = false, lang = 'en' } = Astro.props;
+
+const dir = lang === 'ar' ? 'rtl' : 'ltr';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang} dir={dir}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <title>{title} | Milmar Ramirez</title>
 
     <!-- Open Graph -->
@@ -25,12 +30,12 @@ const { title, description = "Milmar Ramirez - Emmy Award-Winning Meteorologist,
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col antialiased">
     <Navigation />
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    {!hideFooter && <Footer />}
 
     <script>
       // Scroll reveal animation

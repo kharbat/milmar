@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Home">
+<Layout title="Home" lang="ar">
   <!-- Hero Section -->
   <section class="min-h-screen pt-32 pb-20 relative overflow-hidden flex items-center">
     <!-- Background Elements -->
@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL;
         <div class="animate-slide-up order-2 lg:order-1">
           <div class="flex items-center gap-3 mb-6">
             <span class="h-[1px] w-12 bg-gold"></span>
-            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold">Telling The Story</span>
+            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold">سرد القصة</span>
           </div>
 
           <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" style="font-family: var(--font-heading);">
@@ -26,11 +26,11 @@ const base = import.meta.env.BASE_URL;
           </h1>
 
           <p class="text-xl md:text-2xl text-silver mb-8 font-light italic">
-            Emmy Award-Winning Meteorologist
+            خبيرة أرصاد جوية حائزة على جائزة إيمي
           </p>
 
           <p class="text-gray-400 mb-10 leading-relaxed max-w-xl text-lg">
-            Certified Scrum Master and passionate educator turning complex data into clear, compelling narratives — from the studio to the agile team room.
+            خبيرة Scrum Master معتمدة ومعلمة شغوفة تحول البيانات المعقدة إلى قصص واضحة ومقنعة - من الاستوديو إلى غرفة الفريق الرشيق.
           </p>
 
           <div class="flex flex-wrap gap-4 mb-12">
@@ -43,10 +43,10 @@ const base = import.meta.env.BASE_URL;
 
           <div class="flex flex-col sm:flex-row gap-5">
             <a href="#about" class="btn-primary text-center">
-              Meet Milmar
+              تعرف على ميلمار
             </a>
             <a href="#resumes" class="btn-secondary text-center">
-              View Expertise
+              عرض الخبرات
             </a>
           </div>
         </div>
@@ -91,23 +91,23 @@ const base = import.meta.env.BASE_URL;
         <!-- Main Content -->
         <div class="lg:col-span-7 reveal">
           <h2 class="text-4xl text-white mb-8" style="font-family: var(--font-heading);">
-            Precision. Passion. <br/><span class="text-gold">Performance.</span>
+            دقة. شغف. <br/><span class="text-gold">أداء.</span>
           </h2>
 
           <div class="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
             <p>
-              From the high-pressure environment of live television at <strong class="text-white">The Weather Channel</strong>, 
-              <strong class="text-white">Telemundo</strong>, and <strong class="text-white">Univision</strong>, 
-              I mastered the art of delivering critical information with clarity and poise.
+              من بيئة الضغط العالي للتلفزيون المباشر في <strong class="text-white">The Weather Channel</strong> و 
+              <strong class="text-white">Telemundo</strong> و <strong class="text-white">Univision</strong>، 
+              أتقنت فن تقديم المعلومات المهمة بوضوح واتزان.
             </p>
             <p>
-              My journey is defined by versatility. A <strong class="text-gold">University of Miami</strong> graduate 
-              with a double major in Atmospheric Science and Math, I've evolved from an Emmy Award-winning meteorologist 
-              into a certified <strong class="text-silver">Scrum Master</strong> and educational leader.
+              رحلتي تحددها التعددية. خريجة <strong class="text-gold">جامعة ميامي</strong> 
+              بتخصص مزدوج في علوم الغلاف الجوي والرياضيات، تطورت من خبيرة أرصاد جوية حائزة على جائزة إيمي 
+              إلى <strong class="text-silver">Scrum Master</strong> معتمدة وقائدة تعليمية.
             </p>
             <p>
-              Now based in <strong class="text-white">Khobar, Saudi Arabia</strong>, I bring a unique fusion 
-              of analytical rigor and storytelling excellence to every challenge I undertake.
+              أقيم حالياً في <strong class="text-white">الخُبر، المملكة العربية السعودية</strong>، وأقدم دمجاً فريداً 
+              بين الدقة التحليلية والتميز في السرد القصصي لكل تحدٍ أواجهه.
             </p>
           </div>
         </div>
@@ -119,14 +119,14 @@ const base = import.meta.env.BASE_URL;
              <div class="bg-obsidian border border-white/5 p-6 hover:border-gold/30 transition-colors duration-300 group">
                 <div class="text-gold font-heading text-5xl mb-1 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">10+</div>
                 <div class="h-[1px] w-full bg-white/10 mb-3 group-hover:bg-gold/30 transition-colors"></div>
-                <p class="text-sm uppercase tracking-widest text-silver">Years in Broadcast Media</p>
+                <p class="text-sm uppercase tracking-widest text-silver">سنوات في الإعلام</p>
              </div>
 
              <!-- Stat Item -->
              <div class="bg-obsidian border border-white/5 p-6 hover:border-gold/30 transition-colors duration-300 group">
                 <div class="text-gold font-heading text-5xl mb-1 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">3</div>
                 <div class="h-[1px] w-full bg-white/10 mb-3 group-hover:bg-gold/30 transition-colors"></div>
-                <p class="text-sm uppercase tracking-widest text-silver">Major Networks</p>
+                <p class="text-sm uppercase tracking-widest text-silver">شبكات كبرى</p>
              </div>
           </div>
           
@@ -142,11 +142,11 @@ const base = import.meta.env.BASE_URL;
   <section class="py-20 bg-obsidian border-y border-white/5 relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
       <h2 class="text-2xl font-light text-silver uppercase tracking-[0.3em] mb-12">
-        Core Competencies
+        المهارات الأساسية
       </h2>
 
       <div class="flex flex-wrap justify-center gap-3">
-        {['TV Broadcasting', 'Weather Forecasting', 'Crisis Communication', 'Scrum / Agile', 'Project Management', '3D Graphics Production', 'Public Speaking', 'Team Leadership', 'IBM WSI Systems', 'Bilingual (Native Spanish)'].map((skill) => (
+        {['البث التلفزيوني', 'التنبؤ بالطقس', 'اتصالات الأزمات', 'Scrum / Agile', 'إدارة المشاريع', 'إنتاج الجرافيك ثلاثي الأبعاد', 'التحدث أمام الجمهور', 'قيادة الفريق', 'أنظمة IBM WSI', 'ثنائية اللغة (الإسبانية)'].map((skill) => (
            <span class="skill-tag">{skill}</span>
         ))}
       </div>
@@ -159,10 +159,10 @@ const base = import.meta.env.BASE_URL;
       <div class="text-center mb-16 reveal">
         <div class="w-16 h-1 bg-gold mx-auto mb-6"></div>
         <h2 class="text-4xl md:text-5xl text-white mb-6" style="font-family: var(--font-heading);">
-          Expertise
+          الخبرات
         </h2>
         <p class="text-silver/60 max-w-2xl mx-auto text-lg font-light">
-           A multifaceted career built on precision, innovation, and communication.
+           مسيرة مهنية متعددة الجوانب مبنية على الدقة والابتكار والتواصل.
         </p>
       </div>
 
@@ -180,16 +180,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-gold transition-colors" style="font-family: var(--font-heading);">
-            Meteorology
+            الأرصاد الجوية
           </h3>
-          <p class="text-xs text-gold uppercase tracking-widest mb-6">Meteorologist</p>
+          <p class="text-xs text-gold uppercase tracking-widest mb-6">خبيرة أرصاد</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            10+ years on-camera. Expert in visual storytelling and crisis coverage.
+            أكثر من 10 سنوات أمام الكاميرا. خبيرة في السرد البصري وتغطية الأزمات.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-gold/50 group-hover:border-gold pb-1 transition-all">
-            View Portfolio
+            عرض المعرض
           </span>
         </a>
 
@@ -205,16 +205,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-silver transition-colors" style="font-family: var(--font-heading);">
-            Technology
+            التكنولوجيا
           </h3>
           <p class="text-xs text-silver uppercase tracking-widest mb-6">Scrum Master</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            Agile certified. Process optimization. Bridging the gap between technical teams and stakeholders.
+            معتمدة في أجايل. تحسين العمليات. سد الفجوة بين الفرق التقنية وأصحاب المصلحة.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-silver/50 group-hover:border-silver pb-1 transition-all">
-            View Resume
+            عرض السيرة الذاتية
           </span>
         </a>
 
@@ -230,16 +230,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-white transition-colors" style="font-family: var(--font-heading);">
-            Education
+            التعليم
           </h3>
-          <p class="text-xs text-secondary uppercase tracking-widest mb-6 text-gray-400">Communicator</p>
+          <p class="text-xs text-secondary uppercase tracking-widest mb-6 text-gray-400">متحدثة</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            Making the complex simple. Engaging presentations and curriculum development.
+            تبسيط المعقد. عروض تقديمية جذابة وتطوير المناهج.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-white/50 group-hover:border-white pb-1 transition-all">
-            View Resume
+            عرض السيرة الذاتية
           </span>
         </a>
       </div>
@@ -253,10 +253,10 @@ const base = import.meta.env.BASE_URL;
      
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <h2 class="text-4xl font-bold text-white mb-6 reveal" style="font-family: var(--font-heading);">
-        Ready to Collaborate?
+        جاهزون للتعاون؟
       </h2>
       <p class="text-silver mb-10 text-lg reveal delay-100 font-light">
-        Available for broadcast, agile leadership, and speaking engagements.
+        متاحة للبث التلفزيوني، القيادة الرشيقة، والمحاضرات.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-200">
@@ -272,7 +272,7 @@ const base = import.meta.env.BASE_URL;
           rel="noopener noreferrer"
           class="btn-secondary"
         >
-          Visit LinkedIn
+          زيارة LinkedIn
         </a>
       </div>
     </div>

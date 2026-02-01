@@ -1,44 +1,81 @@
 ---
+import { getLangFromUrl, useTranslations, languages } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const base = import.meta.env.BASE_URL;
+
+const homeUrl = lang === 'en' ? `${base}` : `${base}${lang}/`;
+
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/resume-broadcast', label: 'Broadcast' },
-  { href: '/resume-tech', label: 'Tech' },
-  { href: '/resume-educator', label: 'Educator' },
+  { href: homeUrl, label: t('nav.home') },
+  { href: `${homeUrl}resume-broadcast`, label: t('nav.meteorology') },
+  { href: `${homeUrl}resume-tech`, label: t('nav.tech') },
+  { href: `${homeUrl}resume-educator`, label: t('nav.educator') },
 ];
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-lg border-b border-coral/10">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-glass-gold transition-all duration-300">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
       <!-- Logo -->
-      <a href="/" class="text-2xl font-bold text-coral" style="font-family: var(--font-heading);">
-        MR
+      <a href={base} class="text-2xl font-bold tracking-tight text-white group" style="font-family: var(--font-heading);">
+        Milmar <span class="text-gold group-hover:text-gold-light transition-colors">Ramirez</span>
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
         {navLinks.map(link => (
-          <a href={link.href} class="nav-link text-charcoal hover:text-coral font-medium">
+          <a href={link.href} class="nav-link text-sm uppercase tracking-widest hover:text-gold transition-colors">
             {link.label}
           </a>
         ))}
-        <a
-          href="https://www.linkedin.com/in/milmarramirez/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary text-sm"
-        >
-          Connect
-        </a>
+        
+        <!-- Controls Container -->
+        <div class="flex items-center gap-4 pl-4 border-l border-white/10">
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="p-2 text-silver hover:text-gold transition-colors" aria-label="Toggle Theme">
+                <svg class="w-5 h-5 hidden dark:block" id="sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                <svg class="w-5 h-5 block dark:hidden" id="moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+            </button>
+
+            <!-- Language Selector -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 text-sm font-semibold text-silver hover:text-gold transition-colors uppercase">
+                    {lang}
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="absolute right-0 top-full mt-2 w-32 bg-onyx border border-gold/20 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-right">
+                    {Object.entries(languages).map(([code, label]) => (
+                        <a 
+                          href={code === 'en' ? '/website/' : `/website/${code}/`} 
+                          class="lang-select block px-4 py-2 text-sm text-silver hover:text-gold hover:bg-white/5 transition-colors"
+                          data-lang={code}
+                        >
+                            {label}
+                        </a>
+                    ))}
+                </div>
+            </div>
+
+            <a
+              href="https://www.linkedin.com/in/milmarramirez/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary text-xs px-6 py-2 ml-2"
+            >
+              {t('nav.connect')}
+            </a>
+        </div>
       </div>
 
       <!-- Mobile menu button -->
       <button
         id="mobile-menu-button"
-        class="md:hidden p-2 rounded-lg hover:bg-blush transition-colors"
+        class="md:hidden p-2 text-gold hover:bg-white/5 rounded transition-colors"
         aria-label="Toggle menu"
       >
-        <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
@@ -46,24 +83,143 @@ const navLinks = [
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-64 bg-cream shadow-2xl md:hidden">
-    <div class="flex flex-col p-6 space-y-4">
+  <div id="mobile-menu" class="mobile-menu fixed top-20 right-0 bottom-0 w-64 bg-onyx border-l border-white/10 shadow-2xl md:hidden transform transition-transform duration-300 ease-in-out translate-x-full">
+    <div class="flex flex-col p-8 space-y-6">
       {navLinks.map(link => (
         <a
           href={link.href}
-          class="text-charcoal hover:text-coral font-medium py-2 border-b border-coral/10"
+          class="text-silver hover:text-gold font-medium text-lg border-b border-white/5 pb-4 tracking-wide"
         >
           {link.label}
         </a>
       ))}
+      
+      <!-- Mobile Controls -->
+      <div class="flex items-center justify-between pt-4 border-t border-white/10">
+         <span class="text-silver text-sm">Theme</span>
+         <button id="mobile-theme-toggle" class="p-2 text-gold border border-gold/30 rounded">
+            <span class="dark:hidden">{t('nav.theme.dark')}</span>
+            <span class="hidden dark:inline">{t('nav.theme.light')}</span>
+         </button>
+      </div>
+
+      <div class="flex flex-col gap-3">
+         <span class="text-silver text-sm">Language</span>
+         <div class="flex gap-2">
+            <a href="/website/" class="lang-select px-3 py-1 text-xs border border-gold/50 text-gold rounded" data-lang="en">EN</a>
+            <a href="/website/es/" class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="es">ES</a>
+            <a href="/website/ar/" class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="ar">AR</a>
+         </div>
+      </div>
+
       <a
         href="https://www.linkedin.com/in/milmarramirez/"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn-primary text-center mt-4"
+        class="btn-primary text-center mt-4 w-full"
       >
-        Connect
+        {t('nav.connect')}
       </a>
     </div>
   </div>
 </nav>
+
+<script is:inline>
+  // Mobile Menu Logic
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  btn?.addEventListener('click', () => {
+    menu?.classList.toggle('translate-x-full');
+  });
+
+  // Theme Logic
+  const themeToggles = [document.getElementById('theme-toggle'), document.getElementById('mobile-theme-toggle')];
+  const html = document.documentElement;
+  const sunIcon = document.getElementById('sun-icon');
+  const moonIcon = document.getElementById('moon-icon');
+
+  // Check Local Storage or System Preference
+  const savedTheme = localStorage.getItem('theme');
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'light') {
+    html.setAttribute('data-theme', 'light');
+    updateIcons(true);
+  } else {
+    html.removeAttribute('data-theme');
+    updateIcons(false);
+  }
+
+  function updateIcons(isLight) {
+     if(isLight) {
+        sunIcon?.classList.add('hidden');
+        moonIcon?.classList.remove('hidden');
+     } else {
+        sunIcon?.classList.remove('hidden');
+        moonIcon?.classList.add('hidden');
+     }
+  }
+
+  themeToggles.forEach(toggle => {
+      toggle?.addEventListener('click', () => {
+        const isLight = html.getAttribute('data-theme') === 'light';
+        if (isLight) {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+            updateIcons(false);
+        } else {
+            html.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            updateIcons(true);
+        }
+      });
+  });
+</script>
+
+<script is:inline>
+  // Language Persistence & Auto-Redirect (All Pages)
+  const langButtons = document.querySelectorAll('.lang-select');
+  const currentLang = document.documentElement.lang || 'en';
+
+  // 1. Save language preference on click
+  langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+          const targetLang = btn.getAttribute('data-lang');
+          if(targetLang) {
+              localStorage.setItem('preferred_lang', targetLang);
+          }
+      });
+  });
+
+  // 2. Redirect on Load if Language Mismatch
+  const savedLang = localStorage.getItem('preferred_lang');
+  const path = window.location.pathname;
+  const basePath = '/website/';
+
+  // Only redirect if there's a saved preference AND it differs from current page language
+  if (savedLang && savedLang !== currentLang) {
+      // Extract the page-specific path (everything after language prefix)
+      let pagePath = path.replace(basePath, ''); // Remove base
+      
+      // Remove any existing language prefix (es/, ar/)
+      if (pagePath.startsWith('es/')) {
+          pagePath = pagePath.substring(3);
+      } else if (pagePath.startsWith('ar/')) {
+          pagePath = pagePath.substring(3);
+      }
+      
+      // Build new URL based on saved preference
+      let newUrl;
+      if (savedLang === 'en') {
+          newUrl = basePath + pagePath;
+      } else {
+          newUrl = basePath + savedLang + '/' + pagePath;
+      }
+      
+      // Redirect (only if URL is actually different to prevent loops)
+      if (newUrl !== path && newUrl !== path + '/') {
+          window.location.href = newUrl;
+      }
+  }
+</script>

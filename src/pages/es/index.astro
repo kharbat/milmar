@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="Home">
+<Layout title="Home" lang="es">
   <!-- Hero Section -->
   <section class="min-h-screen pt-32 pb-20 relative overflow-hidden flex items-center">
     <!-- Background Elements -->
@@ -17,7 +17,7 @@ const base = import.meta.env.BASE_URL;
         <div class="animate-slide-up order-2 lg:order-1">
           <div class="flex items-center gap-3 mb-6">
             <span class="h-[1px] w-12 bg-gold"></span>
-            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold">Telling The Story</span>
+            <span class="text-gold uppercase tracking-[0.2em] text-sm font-semibold">Contando la Historia</span>
           </div>
 
           <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight" style="font-family: var(--font-heading);">
@@ -26,11 +26,11 @@ const base = import.meta.env.BASE_URL;
           </h1>
 
           <p class="text-xl md:text-2xl text-silver mb-8 font-light italic">
-            Emmy Award-Winning Meteorologist
+            Meteoróloga Ganadora del Emmy
           </p>
 
           <p class="text-gray-400 mb-10 leading-relaxed max-w-xl text-lg">
-            Certified Scrum Master and passionate educator turning complex data into clear, compelling narratives — from the studio to the agile team room.
+            Scrum Master Certificada y educadora apasionada que convierte datos complejos en narrativas claras y convincentes — desde el estudio hasta la sala de equipos ágiles.
           </p>
 
           <div class="flex flex-wrap gap-4 mb-12">
@@ -43,10 +43,10 @@ const base = import.meta.env.BASE_URL;
 
           <div class="flex flex-col sm:flex-row gap-5">
             <a href="#about" class="btn-primary text-center">
-              Meet Milmar
+              Conoce a Milmar
             </a>
             <a href="#resumes" class="btn-secondary text-center">
-              View Expertise
+              Ver Experiencia
             </a>
           </div>
         </div>
@@ -91,23 +91,23 @@ const base = import.meta.env.BASE_URL;
         <!-- Main Content -->
         <div class="lg:col-span-7 reveal">
           <h2 class="text-4xl text-white mb-8" style="font-family: var(--font-heading);">
-            Precision. Passion. <br/><span class="text-gold">Performance.</span>
+            Precisión. Pasión. <br/><span class="text-gold">Desempeño.</span>
           </h2>
 
           <div class="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
             <p>
-              From the high-pressure environment of live television at <strong class="text-white">The Weather Channel</strong>, 
-              <strong class="text-white">Telemundo</strong>, and <strong class="text-white">Univision</strong>, 
-              I mastered the art of delivering critical information with clarity and poise.
+              Desde el entorno de alta presión de la televisión en vivo en <strong class="text-white">The Weather Channel</strong>, 
+              <strong class="text-white">Telemundo</strong> y <strong class="text-white">Univision</strong>, 
+              dominé el arte de entregar información crítica con claridad y aplomo.
             </p>
             <p>
-              My journey is defined by versatility. A <strong class="text-gold">University of Miami</strong> graduate 
-              with a double major in Atmospheric Science and Math, I've evolved from an Emmy Award-winning meteorologist 
-              into a certified <strong class="text-silver">Scrum Master</strong> and educational leader.
+              Mi trayectoria se define por la versatilidad. Graduada de la <strong class="text-gold">Universidad de Miami</strong> 
+              con doble licenciatura en Ciencias Atmosféricas y Matemáticas, he evolucionado de meteoróloga ganadora del Emmy 
+              a <strong class="text-silver">Scrum Master</strong> certificada y líder educativa.
             </p>
             <p>
-              Now based in <strong class="text-white">Khobar, Saudi Arabia</strong>, I bring a unique fusion 
-              of analytical rigor and storytelling excellence to every challenge I undertake.
+              Ahora radicada en <strong class="text-white">Al Khobar, Arabia Saudita</strong>, aporto una fusión única 
+              de rigor analítico y excelencia narrativa a cada desafío que emprendo.
             </p>
           </div>
         </div>
@@ -119,14 +119,14 @@ const base = import.meta.env.BASE_URL;
              <div class="bg-obsidian border border-white/5 p-6 hover:border-gold/30 transition-colors duration-300 group">
                 <div class="text-gold font-heading text-5xl mb-1 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">10+</div>
                 <div class="h-[1px] w-full bg-white/10 mb-3 group-hover:bg-gold/30 transition-colors"></div>
-                <p class="text-sm uppercase tracking-widest text-silver">Years in Broadcast Media</p>
+                <p class="text-sm uppercase tracking-widest text-silver">Años en Medios de Comunicación</p>
              </div>
 
              <!-- Stat Item -->
              <div class="bg-obsidian border border-white/5 p-6 hover:border-gold/30 transition-colors duration-300 group">
                 <div class="text-gold font-heading text-5xl mb-1 opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all">3</div>
                 <div class="h-[1px] w-full bg-white/10 mb-3 group-hover:bg-gold/30 transition-colors"></div>
-                <p class="text-sm uppercase tracking-widest text-silver">Major Networks</p>
+                <p class="text-sm uppercase tracking-widest text-silver">Cadenas Principales</p>
              </div>
           </div>
           
@@ -142,11 +142,11 @@ const base = import.meta.env.BASE_URL;
   <section class="py-20 bg-obsidian border-y border-white/5 relative">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
       <h2 class="text-2xl font-light text-silver uppercase tracking-[0.3em] mb-12">
-        Core Competencies
+        Competencias Principales
       </h2>
 
       <div class="flex flex-wrap justify-center gap-3">
-        {['TV Broadcasting', 'Weather Forecasting', 'Crisis Communication', 'Scrum / Agile', 'Project Management', '3D Graphics Production', 'Public Speaking', 'Team Leadership', 'IBM WSI Systems', 'Bilingual (Native Spanish)'].map((skill) => (
+        {['Transmisión en TV', 'Pronóstico del Tiempo', 'Comunicación de Crisis', 'Scrum / Agile', 'Gestión de Proyectos', 'Producción de Gráficos 3D', 'Oratoria', 'Liderazgo de Equipos', 'Sistemas IBM WSI', 'Bilingüe (Nativo Español)'].map((skill) => (
            <span class="skill-tag">{skill}</span>
         ))}
       </div>
@@ -159,10 +159,10 @@ const base = import.meta.env.BASE_URL;
       <div class="text-center mb-16 reveal">
         <div class="w-16 h-1 bg-gold mx-auto mb-6"></div>
         <h2 class="text-4xl md:text-5xl text-white mb-6" style="font-family: var(--font-heading);">
-          Expertise
+          Experiencia
         </h2>
         <p class="text-silver/60 max-w-2xl mx-auto text-lg font-light">
-           A multifaceted career built on precision, innovation, and communication.
+           Una carrera multifacética construida sobre precisión, innovación y comunicación.
         </p>
       </div>
 
@@ -180,16 +180,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-gold transition-colors" style="font-family: var(--font-heading);">
-            Meteorology
+            Meteorología
           </h3>
-          <p class="text-xs text-gold uppercase tracking-widest mb-6">Meteorologist</p>
+          <p class="text-xs text-gold uppercase tracking-widest mb-6">Meteoróloga</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            10+ years on-camera. Expert in visual storytelling and crisis coverage.
+            10+ años frente a la cámara. Experta en narración visual y cobertura de crisis.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-gold/50 group-hover:border-gold pb-1 transition-all">
-            View Portfolio
+            Ver Portafolio
           </span>
         </a>
 
@@ -205,16 +205,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-silver transition-colors" style="font-family: var(--font-heading);">
-            Technology
+            Tecnología
           </h3>
           <p class="text-xs text-silver uppercase tracking-widest mb-6">Scrum Master</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            Agile certified. Process optimization. Bridging the gap between technical teams and stakeholders.
+            Certificada en Agile. Optimización de procesos. Uniendo equipos técnicos con las partes interesadas.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-silver/50 group-hover:border-silver pb-1 transition-all">
-            View Resume
+            Ver Currículum
           </span>
         </a>
 
@@ -230,16 +230,16 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-white transition-colors" style="font-family: var(--font-heading);">
-            Education
+            Educación
           </h3>
-          <p class="text-xs text-secondary uppercase tracking-widest mb-6 text-gray-400">Communicator</p>
+          <p class="text-xs text-secondary uppercase tracking-widest mb-6 text-gray-400">Comunicadora</p>
 
           <p class="text-gray-400 text-sm leading-relaxed mb-8 flex-grow">
-            Making the complex simple. Engaging presentations and curriculum development.
+            Haciendo simple lo complejo. Presentaciones atractivas y desarrollo de planes de estudio.
           </p>
 
           <span class="text-sm font-semibold text-white border-b border-white/50 group-hover:border-white pb-1 transition-all">
-            View Resume
+            Ver Currículum
           </span>
         </a>
       </div>
@@ -253,10 +253,10 @@ const base = import.meta.env.BASE_URL;
      
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <h2 class="text-4xl font-bold text-white mb-6 reveal" style="font-family: var(--font-heading);">
-        Ready to Collaborate?
+        ¿Listo para Colaborar?
       </h2>
       <p class="text-silver mb-10 text-lg reveal delay-100 font-light">
-        Available for broadcast, agile leadership, and speaking engagements.
+        Disponible para televisión, liderazgo ágil y conferencias.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-200">
@@ -272,7 +272,7 @@ const base = import.meta.env.BASE_URL;
           rel="noopener noreferrer"
           class="btn-secondary"
         >
-          Visit LinkedIn
+          Visitar LinkedIn
         </a>
       </div>
     </div>

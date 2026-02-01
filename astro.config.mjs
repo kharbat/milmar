@@ -10,7 +10,7 @@ export default defineConfig({
   // or 'https://username.github.io/repo-name' for project site
   site: 'https://milmarramirez.github.io',
   // Required for project repos (not username.github.io)
-  base: '/website',
+  base: '/website/',
   output: 'static',
   vite: {
     plugins: [tailwindcss()]
