@@ -1,5 +1,6 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import EmailCopy from './EmailCopy.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -53,16 +54,13 @@ const homeUrl = lang === 'en' ? `${base}` : `${base}${lang}/`;
       <div>
         <h4 class="text-xs font-bold text-gold uppercase tracking-widest mb-6">{t('footer.contact')}</h4>
         <div class="space-y-4">
-          <a
-            href="mailto:milmarramirez0618@gmail.com"
-            class="flex items-center text-sm text-silver hover:text-gold transition-colors"
-          >
+          <EmailCopy class="flex items-center text-sm text-silver hover:text-gold transition-colors">
             <svg class="w-4 h-4 mr-3 text-gold/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            milmarramirez0618@gmail.com
-          </a>
+            <span class="email-display">m]lm*r•••••0618[@]gm*]l.c•m</span>
+          </EmailCopy>
           <a
             href="https://www.linkedin.com/in/milmarramirez/"
             target="_blank"
@@ -84,7 +82,7 @@ const homeUrl = lang === 'en' ? `${base}` : `${base}${lang}/`;
         &copy; {currentYear} Milmar Ramirez. {t('footer.rights')}
       </p>
       <p class="text-xs text-gray-600 mt-2 sm:mt-0 font-medium tracking-wide">
-        EST. 2025
+        {t('footer.location')}
       </p>
     </div>
   </div>

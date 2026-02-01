@@ -1,0 +1,50 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+// Obfuscate email to avoid spam scrapers
+const emailParts = ['milmarramirez0618', 'gmail', 'com'];
+---
+
+<button
+  class={`email-copy cursor-pointer ${className}`}
+  data-email={emailParts.join('.')}
+  data-parts={JSON.stringify(emailParts)}
+  aria-label="Copy email to clipboard"
+>
+  <slot />
+  <span class="email-tooltip hidden absolute -top-8 left-1/2 -translate-x-1/2 bg-gold text-obsidian text-xs px-2 py-1 rounded whitespace-nowrap font-semibold">
+    Copied!
+  </span>
+</button>
+
+<style>
+  .email-copy {
+    position: relative;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.email-copy').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const parts = JSON.parse(btn.getAttribute('data-parts') || '[]');
+      const email = `${parts[0]}@${parts[1]}.${parts[2]}`;
+      
+      try {
+        await navigator.clipboard.writeText(email);
+        const tooltip = btn.querySelector('.email-tooltip');
+        if (tooltip) {
+          tooltip.classList.remove('hidden');
+          setTimeout(() => {
+            tooltip.classList.add('hidden');
+          }, 1500);
+        }
+      } catch (err) {
+        console.error('Failed to copy:', err);
+      }
+    });
+  });
+</script>

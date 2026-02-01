@@ -77,9 +77,18 @@
   color: #1a1a1a;
 }
 
-/* Ensure profile images are always colorful (no grayscale filter in light mode) */
+/* Ensure profile images are always colorful and high quality */
 [data-theme='light'] img {
   filter: none !important;
+}
+
+/* Crisp image rendering with hardware acceleration */
+img {
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 
