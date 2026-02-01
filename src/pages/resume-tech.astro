@@ -1,0 +1,349 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Technology & Agile Resume" description="Certified Scrum Master with strong project coordination and IT enthusiasm">
+  <!-- Hero -->
+  <section class="relative pt-24 pb-16 bg-gradient-hero overflow-hidden">
+    <div class="absolute top-20 right-10 w-64 h-64 bg-teal/20 blob opacity-60"></div>
+    <div class="absolute bottom-10 left-10 w-48 h-48 bg-charcoal/10 blob-2 opacity-50"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Profile Image -->
+        <div class="relative animate-scale-in">
+          <div class="w-40 h-40 rounded-full overflow-hidden bg-gradient-teal">
+            <img
+              src="/images/profile.jpg"
+              alt="Milmar Ramirez"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-teal text-white text-4xl font-bold" style="font-family: var(--font-heading);">
+              MR
+            </div>
+          </div>
+          <div class="absolute -bottom-2 -right-2 bg-teal text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            Scrum Master
+          </div>
+        </div>
+
+        <!-- Header Info -->
+        <div class="text-center md:text-left animate-slide-up">
+          <div class="inline-block bg-teal/20 text-teal-dark text-xs font-bold px-3 py-1 rounded-full mb-4">
+            Technology & Agile
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-2" style="font-family: var(--font-heading);">
+            Milmar Ramirez
+          </h1>
+          <p class="text-xl text-charcoal/70 mb-4">Scrum Master | Project Coordinator | IT Enthusiast</p>
+
+          <div class="flex flex-wrap gap-3 justify-center md:justify-start text-sm">
+            <a href="mailto:milmarramirez0618@gmail.com" class="flex items-center text-charcoal/60 hover:text-teal transition-colors">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email
+            </a>
+            <a href="https://www.linkedin.com/in/milmarramirez/" target="_blank" class="flex items-center text-charcoal/60 hover:text-teal transition-colors">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <span class="flex items-center text-charcoal/60">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Khobar, Saudi Arabia
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Column -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Profile Summary -->
+          <div class="reveal">
+            <h2 class="text-2xl font-bold text-teal mb-4 flex items-center" style="font-family: var(--font-heading);">
+              <span class="w-8 h-1 bg-teal rounded mr-3"></span>
+              Profile
+            </h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Certified Scrum Master with a passion for AI and IT, bringing a unique blend of technical expertise
+              and exceptional communication skills. With over a decade of experience in high-pressure broadcast
+              environments, I excel at guiding teams through challenges, coordinating complex projects, and
+              ensuring clear communication across all stakeholders. My background in leading live productions
+              and managing crisis situations translates directly to effective agile project management and
+              technology team leadership.
+            </p>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="reveal">
+            <h2 class="text-2xl font-bold text-teal mb-8 flex items-center" style="font-family: var(--font-heading);">
+              <span class="w-8 h-1 bg-teal rounded mr-3"></span>
+              Relevant Experience
+            </h2>
+
+            <div class="space-y-8">
+              <!-- The Weather Channel -->
+              <div class="timeline-item pb-8" style="--tw-border-opacity: 1;">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold">On-Camera Meteorologist & Team Lead</h3>
+                  <span class="text-teal font-semibold">2022 - 2024</span>
+                </div>
+                <p class="text-coral font-semibold mb-3">The Weather Channel</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Led cross-functional teams during high-stakes storm coverage events
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Coordinated real-time communication between studio, field teams, and technical staff
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Managed rapid iteration and adaptation during live broadcasts (agile mindset)
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Frankie's Kitchen -->
+              <div class="timeline-item pb-8">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold">Product Manager</h3>
+                  <span class="text-teal font-semibold">2018 - 2019</span>
+                </div>
+                <p class="text-coral font-semibold mb-3">Frankie Vs Kitchen</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Managed multiple production lines simultaneously
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Oversaw product development lifecycle from ideation to delivery
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Ensured high-quality standards while maintaining efficient production timelines
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Implemented process improvements to optimize team output
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Telemundo -->
+              <div class="timeline-item">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold">TV Meteorologist & Operations Coordinator</h3>
+                  <span class="text-teal font-semibold">2015 - 2018</span>
+                </div>
+                <p class="text-coral font-semibold mb-3">Telemundo 39</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Advanced user of IBM WSI technology stack: Max Reality, Social, Storm tracking, and Radar
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Coordinated severe weather coverage planning and resource allocation
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-teal rounded-full mt-2 mr-3 shrink-0"></span>
+                    Organized field team locations and equipment positioning
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Certifications -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl border-2 border-teal/20">
+            <h2 class="text-xl font-bold text-teal mb-4" style="font-family: var(--font-heading);">
+              Certifications
+            </h2>
+            <div class="bg-white p-4 rounded-xl">
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 bg-teal rounded-lg flex items-center justify-center">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-bold">Scrum Master</p>
+                  <p class="text-xs text-charcoal/60">Certified 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-teal mb-4" style="font-family: var(--font-heading);">
+              Education
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold">Double Bachelor of Science</p>
+                <p class="text-sm text-charcoal/60">Atmospheric Science & Mathematics</p>
+                <p class="text-sm text-teal">University of Miami</p>
+                <p class="text-xs text-charcoal/50">2011 - 2014</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-teal mb-4" style="font-family: var(--font-heading);">
+              Technical Skills
+            </h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-xs">Scrum / Agile</span>
+              <span class="skill-tag text-xs">Project Management</span>
+              <span class="skill-tag text-xs">Product Development</span>
+              <span class="skill-tag text-xs">Team Leadership</span>
+              <span class="skill-tag text-xs">AI & IT Enthusiasm</span>
+              <span class="skill-tag text-xs">IBM WSI Systems</span>
+              <span class="skill-tag text-xs">3D Graphics Software</span>
+              <span class="skill-tag text-xs">Crisis Management</span>
+              <span class="skill-tag text-xs">Cross-functional Coordination</span>
+            </div>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-teal mb-4" style="font-family: var(--font-heading);">
+              Core Competencies
+            </h2>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-teal/20 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <span class="text-sm">Clear Communication</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-teal/20 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <span class="text-sm">Team Facilitation</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-teal/20 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <span class="text-sm">Fast Adaptation</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-teal/20 rounded-full flex items-center justify-center">
+                  <svg class="w-4 h-4 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <span class="text-sm">Quality Assurance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-teal mb-4" style="font-family: var(--font-heading);">
+              Languages
+            </h2>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">English</span>
+                  <span class="text-xs text-charcoal/60">Fluent</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-teal rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Spanish</span>
+                  <span class="text-xs text-charcoal/60">Native</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-coral rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Arabic</span>
+                  <span class="text-xs text-charcoal/60">Learning</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-gold rounded-full" style="width: 30%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download / Print -->
+          <div class="reveal">
+            <button onclick="window.print()" class="w-full bg-teal text-white px-6 py-3 rounded-full font-semibold flex items-center justify-center gap-2 hover:-translate-y-1 transition-all shadow-lg">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+              Print Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Resumes CTA -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-8" style="font-family: var(--font-heading);">
+        Explore Other Resume Versions
+      </h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/resume-broadcast" class="btn-primary">
+          Broadcast & Media
+        </a>
+        <a href="/resume-educator" class="px-6 py-3 rounded-full font-semibold border-2 transition-all hover:-translate-y-1" style="border-color: #9B59B6; color: #9B59B6;">
+          Education
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .timeline-item::before {
+    background: linear-gradient(to bottom, var(--color-teal), var(--color-coral)) !important;
+  }
+  .timeline-item::after {
+    background: var(--color-teal) !important;
+  }
+  @media print {
+    nav, footer, section:last-child {
+      display: none !important;
+    }
+  }
+</style>

@@ -1,0 +1,69 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/resume-broadcast', label: 'Broadcast' },
+  { href: '/resume-tech', label: 'Tech' },
+  { href: '/resume-educator', label: 'Educator' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-cream/80 backdrop-blur-lg border-b border-coral/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <a href="/" class="text-2xl font-bold text-coral" style="font-family: var(--font-heading);">
+        MR
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {navLinks.map(link => (
+          <a href={link.href} class="nav-link text-charcoal hover:text-coral font-medium">
+            {link.label}
+          </a>
+        ))}
+        <a
+          href="https://www.linkedin.com/in/milmarramirez/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary text-sm"
+        >
+          Connect
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2 rounded-lg hover:bg-blush transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-64 bg-cream shadow-2xl md:hidden">
+    <div class="flex flex-col p-6 space-y-4">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class="text-charcoal hover:text-coral font-medium py-2 border-b border-coral/10"
+        >
+          {link.label}
+        </a>
+      ))}
+      <a
+        href="https://www.linkedin.com/in/milmarramirez/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary text-center mt-4"
+      >
+        Connect
+      </a>
+    </div>
+  </div>
+</nav>

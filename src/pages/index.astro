@@ -1,0 +1,434 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden pt-16">
+    <!-- Decorative blobs -->
+    <div class="absolute top-20 left-10 w-72 h-72 bg-coral/20 blob opacity-60"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-teal/20 blob-2 opacity-50"></div>
+    <div class="absolute top-1/2 left-1/3 w-48 h-48 bg-gold/20 blob opacity-40"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Text Content -->
+        <div class="text-center lg:text-left">
+          <div class="animate-slide-up">
+            <span class="inline-block px-4 py-2 bg-coral/10 text-coral rounded-full text-sm font-semibold mb-6">
+              Emmy Award Winner
+            </span>
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-slide-up delay-100" style="font-family: var(--font-heading);">
+            Hi, I'm <br />
+            <span class="text-shimmer">Milmar Ramirez</span>
+          </h1>
+
+          <p class="text-xl md:text-2xl text-charcoal/70 mb-8 animate-slide-up delay-200">
+            Meteorologist <span class="text-coral">.</span>
+            Scrum Master <span class="text-teal">.</span>
+            Educator
+          </p>
+
+          <p class="text-lg text-charcoal/60 mb-10 max-w-xl animate-slide-up delay-300">
+            I transform complexity into clarity. Whether it's breaking down severe weather,
+            guiding agile teams, or educating minds — I bring passion, precision, and personality to everything I do.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slide-up delay-400">
+            <a href="#about" class="btn-primary">
+              Learn More
+            </a>
+            <a href="#resumes" class="btn-secondary">
+              View Resumes
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="relative animate-scale-in delay-300">
+          <div class="relative w-80 h-80 md:w-96 md:h-96 mx-auto">
+            <!-- Decorative ring -->
+            <div class="absolute inset-0 rounded-full bg-gradient-warm animate-gradient opacity-80"></div>
+            <div class="absolute inset-2 rounded-full bg-cream"></div>
+
+            <!-- Profile image placeholder -->
+            <div class="absolute inset-4 rounded-full overflow-hidden bg-gradient-warm animate-pulse-glow">
+              <img
+                src="/images/profile.jpg"
+                alt="Milmar Ramirez"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="hidden w-full h-full items-center justify-center bg-gradient-coral text-white text-6xl font-bold" style="font-family: var(--font-heading);">
+                MR
+              </div>
+            </div>
+
+            <!-- Emmy badge -->
+            <div class="absolute -bottom-2 -right-2 emmy-badge text-charcoal px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+              Emmy Winner
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator">
+        <svg class="w-8 h-8 text-coral" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- About Text -->
+        <div class="reveal">
+          <span class="text-coral font-semibold uppercase tracking-wider text-sm">About Me</span>
+          <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-8" style="font-family: var(--font-heading);">
+            A Story of Passion & <span class="text-coral">Versatility</span>
+          </h2>
+
+          <div class="space-y-6 text-charcoal/70 text-lg">
+            <p>
+              From the weather desk at <strong class="text-charcoal">The Weather Channel</strong> to the stages of
+              <strong class="text-charcoal">Telemundo</strong> and <strong class="text-charcoal">Univision</strong>,
+              I've spent a decade mastering the art of communication under pressure.
+            </p>
+            <p>
+              My journey began at the <strong class="text-charcoal">University of Miami</strong>, where I earned
+              a Double Bachelor's in Atmospheric Science and Mathematics. Since then, I've led hurricane coverage,
+              won an <strong class="text-coral">Emmy Award</strong>, and transitioned into tech with a
+              <strong class="text-teal">Scrum Master certification</strong>.
+            </p>
+            <p>
+              Today, I combine my broadcast expertise with project management skills, all while nurturing my
+              passion for education. Based in <strong class="text-charcoal">Khobar, Saudi Arabia</strong>,
+              I'm ready for my next chapter.
+            </p>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="grid grid-cols-3 gap-6 mt-10">
+            <div class="text-center p-4 bg-blush rounded-xl">
+              <div class="text-3xl font-bold text-coral">10+</div>
+              <div class="text-sm text-charcoal/60">Years Experience</div>
+            </div>
+            <div class="text-center p-4 bg-lavender/50 rounded-xl">
+              <div class="text-3xl font-bold text-teal">3</div>
+              <div class="text-sm text-charcoal/60">Languages</div>
+            </div>
+            <div class="text-center p-4 bg-gold/20 rounded-xl">
+              <div class="text-3xl font-bold text-gold-dark">1</div>
+              <div class="text-sm text-charcoal/60">Emmy Award</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills & Languages -->
+        <div class="reveal delay-200">
+          <div class="bg-gradient-hero p-8 rounded-3xl">
+            <h3 class="text-2xl font-bold mb-6" style="font-family: var(--font-heading);">
+              What I Bring
+            </h3>
+
+            <div class="space-y-6">
+              <!-- Skills -->
+              <div>
+                <h4 class="text-sm font-semibold text-coral uppercase tracking-wider mb-3">Expertise</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="skill-tag">TV Broadcasting</span>
+                  <span class="skill-tag">Weather Forecasting</span>
+                  <span class="skill-tag">Crisis Communication</span>
+                  <span class="skill-tag">Scrum / Agile</span>
+                  <span class="skill-tag">Project Management</span>
+                  <span class="skill-tag">3D Graphics Production</span>
+                  <span class="skill-tag">Public Speaking</span>
+                  <span class="skill-tag">Team Leadership</span>
+                </div>
+              </div>
+
+              <!-- Languages -->
+              <div>
+                <h4 class="text-sm font-semibold text-teal uppercase tracking-wider mb-3">Languages</h4>
+                <div class="space-y-3">
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm font-medium">English</span>
+                      <span class="text-sm text-charcoal/60">Fluent</span>
+                    </div>
+                    <div class="h-2 bg-white rounded-full overflow-hidden">
+                      <div class="h-full bg-coral rounded-full" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm font-medium">Spanish</span>
+                      <span class="text-sm text-charcoal/60">Native</span>
+                    </div>
+                    <div class="h-2 bg-white rounded-full overflow-hidden">
+                      <div class="h-full bg-teal rounded-full" style="width: 100%"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span class="text-sm font-medium">Arabic</span>
+                      <span class="text-sm text-charcoal/60">Learning</span>
+                    </div>
+                    <div class="h-2 bg-white rounded-full overflow-hidden">
+                      <div class="h-full bg-gold rounded-full" style="width: 30%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education -->
+              <div>
+                <h4 class="text-sm font-semibold text-educator-primary uppercase tracking-wider mb-3">Education</h4>
+                <div class="bg-white p-4 rounded-xl">
+                  <p class="font-semibold">Double Bachelor of Science</p>
+                  <p class="text-sm text-charcoal/60">Atmospheric Science & Mathematics</p>
+                  <p class="text-sm text-coral">University of Miami • 2011-2014</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl mt-3">
+                  <p class="font-semibold">Scrum Master Certification</p>
+                  <p class="text-sm text-charcoal/60">Agile Project Management</p>
+                  <p class="text-sm text-teal">2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-coral font-semibold uppercase tracking-wider text-sm">Gallery</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-4" style="font-family: var(--font-heading);">
+          Moments & <span class="text-teal">Milestones</span>
+        </h2>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal delay-200">
+        <!-- Gallery items - placeholders for photos -->
+        <div class="gallery-item aspect-square bg-gradient-coral flex items-center justify-center text-white">
+          <div class="text-center p-4">
+            <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-sm opacity-70">Add photo: gallery-1.jpg</p>
+          </div>
+        </div>
+
+        <div class="gallery-item aspect-square md:col-span-2 md:row-span-2 bg-gradient-teal flex items-center justify-center text-white">
+          <div class="text-center p-4">
+            <svg class="w-16 h-16 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-sm opacity-70">Add photo: gallery-2.jpg (featured)</p>
+          </div>
+        </div>
+
+        <div class="gallery-item aspect-square bg-gradient-warm animate-gradient flex items-center justify-center text-white">
+          <div class="text-center p-4">
+            <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-sm opacity-70">Add photo: gallery-3.jpg</p>
+          </div>
+        </div>
+
+        <div class="gallery-item aspect-square bg-educator-primary flex items-center justify-center text-white">
+          <div class="text-center p-4">
+            <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-sm opacity-70">Add photo: gallery-4.jpg</p>
+          </div>
+        </div>
+
+        <div class="gallery-item aspect-square col-span-2 md:col-span-1 bg-gold flex items-center justify-center text-charcoal">
+          <div class="text-center p-4">
+            <svg class="w-12 h-12 mx-auto mb-2 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <p class="text-sm opacity-70">Add photo: gallery-5.jpg</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-charcoal/50 mt-8 text-sm">
+        Replace placeholders with images in <code class="bg-white px-2 py-1 rounded">/public/images/</code>
+      </p>
+    </div>
+  </section>
+
+  <!-- Resume Cards Section -->
+  <section id="resumes" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <span class="text-coral font-semibold uppercase tracking-wider text-sm">My Expertise</span>
+        <h2 class="text-4xl md:text-5xl font-bold mt-4" style="font-family: var(--font-heading);">
+          Three Paths, <span class="text-coral">One Professional</span>
+        </h2>
+        <p class="text-charcoal/60 mt-4 max-w-2xl mx-auto text-lg">
+          Depending on the opportunity, I bring different facets of my experience to the table.
+          Explore each resume version tailored to specific industries.
+        </p>
+      </div>
+
+      <!-- Resume Cards -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Broadcast Card -->
+        <a href="/resume-broadcast" class="group card-hover block reveal delay-100">
+          <div class="bg-gradient-hero p-8 rounded-3xl border-2 border-transparent group-hover:border-coral h-full">
+            <div class="w-16 h-16 bg-gradient-coral rounded-2xl flex items-center justify-center mb-6 group-hover:animate-bounce-subtle">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+
+            <div class="emmy-badge inline-block text-xs font-bold px-3 py-1 rounded-full mb-4">
+              Emmy Winner
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4" style="font-family: var(--font-heading);">
+              Broadcast & Media
+            </h3>
+
+            <p class="text-charcoal/60 mb-6">
+              TV Meteorologist with 10+ years of on-camera experience at The Weather Channel,
+              Telemundo, and Univision. Hurricane coverage specialist.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-coral/10 text-coral px-2 py-1 rounded-full">On-Camera</span>
+              <span class="text-xs bg-coral/10 text-coral px-2 py-1 rounded-full">Weather</span>
+              <span class="text-xs bg-coral/10 text-coral px-2 py-1 rounded-full">Live TV</span>
+            </div>
+
+            <div class="flex items-center text-coral font-semibold group-hover:translate-x-2 transition-transform">
+              View Resume
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tech Card -->
+        <a href="/resume-tech" class="group card-hover block reveal delay-200">
+          <div class="bg-gradient-hero p-8 rounded-3xl border-2 border-transparent group-hover:border-teal h-full">
+            <div class="w-16 h-16 bg-gradient-teal rounded-2xl flex items-center justify-center mb-6 group-hover:animate-bounce-subtle">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+              </svg>
+            </div>
+
+            <div class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 bg-teal/20 text-teal-dark">
+              Certified 2025
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4" style="font-family: var(--font-heading);">
+              Technology & Agile
+            </h3>
+
+            <p class="text-charcoal/60 mb-6">
+              Certified Scrum Master with enthusiasm for AI and IT.
+              Strong project coordination skills with product management experience.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs bg-teal/10 text-teal-dark px-2 py-1 rounded-full">Scrum Master</span>
+              <span class="text-xs bg-teal/10 text-teal-dark px-2 py-1 rounded-full">Agile</span>
+              <span class="text-xs bg-teal/10 text-teal-dark px-2 py-1 rounded-full">AI/IT</span>
+            </div>
+
+            <div class="flex items-center text-teal font-semibold group-hover:translate-x-2 transition-transform">
+              View Resume
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Educator Card -->
+        <a href="/resume-educator" class="group card-hover block reveal delay-300">
+          <div class="bg-gradient-hero p-8 rounded-3xl border-2 border-transparent group-hover:border-educator-primary h-full">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:animate-bounce-subtle" style="background: linear-gradient(135deg, #9B59B6 0%, #8E44AD 100%);">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+
+            <div class="inline-block text-xs font-bold px-3 py-1 rounded-full mb-4 bg-educator-primary/20 text-educator-primary">
+              Bilingual
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4" style="font-family: var(--font-heading);">
+              Education
+            </h3>
+
+            <p class="text-charcoal/60 mb-6">
+              Teaching-oriented professional with a passion for guiding others.
+              Expert at making complex scientific concepts relatable and engaging.
+            </p>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(155, 89, 182, 0.1); color: #8E44AD;">Math & Science</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(155, 89, 182, 0.1); color: #8E44AD;">Curriculum</span>
+              <span class="text-xs px-2 py-1 rounded-full" style="background: rgba(155, 89, 182, 0.1); color: #8E44AD;">Bilingual</span>
+            </div>
+
+            <div class="flex items-center font-semibold group-hover:translate-x-2 transition-transform" style="color: #9B59B6;">
+              View Resume
+              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-warm animate-gradient">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 reveal" style="font-family: var(--font-heading);">
+        Let's Create Something <br />Amazing Together
+      </h2>
+      <p class="text-white/80 text-xl mb-10 reveal delay-100">
+        Whether you need a dynamic broadcaster, an agile project leader,
+        or a passionate educator — I'm ready to bring my best.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal delay-200">
+        <a
+          href="mailto:milmarramirez0618@gmail.com"
+          class="bg-white text-coral px-8 py-4 rounded-full font-bold hover:bg-cream hover:-translate-y-1 transition-all shadow-lg"
+        >
+          Get In Touch
+        </a>
+        <a
+          href="https://www.linkedin.com/in/milmarramirez/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 hover:-translate-y-1 transition-all"
+        >
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Broadcast & Media Resume" description="Emmy Award-Winning TV Meteorologist with 10+ years of on-camera experience">
+  <!-- Hero -->
+  <section class="relative pt-24 pb-16 bg-gradient-hero overflow-hidden">
+    <div class="absolute top-20 right-10 w-64 h-64 bg-coral/20 blob opacity-60"></div>
+    <div class="absolute bottom-10 left-10 w-48 h-48 bg-gold/30 blob-2 opacity-50"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <!-- Profile Image -->
+        <div class="relative animate-scale-in">
+          <div class="w-40 h-40 rounded-full overflow-hidden bg-gradient-coral animate-pulse-glow">
+            <img
+              src="/images/profile.jpg"
+              alt="Milmar Ramirez"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="hidden w-full h-full items-center justify-center bg-gradient-coral text-white text-4xl font-bold" style="font-family: var(--font-heading);">
+              MR
+            </div>
+          </div>
+          <div class="absolute -bottom-2 -right-2 emmy-badge text-charcoal px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            Emmy Winner
+          </div>
+        </div>
+
+        <!-- Header Info -->
+        <div class="text-center md:text-left animate-slide-up">
+          <div class="emmy-badge inline-block text-xs font-bold px-3 py-1 rounded-full mb-4">
+            Broadcast & Media
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-2" style="font-family: var(--font-heading);">
+            Milmar Ramirez
+          </h1>
+          <p class="text-xl text-charcoal/70 mb-4">Emmy Award-Winning TV Meteorologist</p>
+
+          <div class="flex flex-wrap gap-3 justify-center md:justify-start text-sm">
+            <a href="mailto:milmarramirez0618@gmail.com" class="flex items-center text-charcoal/60 hover:text-coral transition-colors">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              Email
+            </a>
+            <a href="https://www.linkedin.com/in/milmarramirez/" target="_blank" class="flex items-center text-charcoal/60 hover:text-coral transition-colors">
+              <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <span class="flex items-center text-charcoal/60">
+              <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Khobar, Saudi Arabia
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-12">
+        <!-- Main Column -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Profile Summary -->
+          <div class="reveal">
+            <h2 class="text-2xl font-bold text-coral mb-4 flex items-center" style="font-family: var(--font-heading);">
+              <span class="w-8 h-1 bg-coral rounded mr-3"></span>
+              Profile
+            </h2>
+            <p class="text-charcoal/70 leading-relaxed">
+              Emmy Award-winning TV Meteorologist with over a decade of on-camera experience delivering
+              accurate weather forecasts and leading severe weather coverage. Expert in hurricane reporting,
+              crisis communication, and engaging audiences across major networks including The Weather Channel,
+              Telemundo, and Univision. Known for translating complex atmospheric science into compelling,
+              accessible broadcasts that keep communities informed and safe.
+            </p>
+          </div>
+
+          <!-- Work Experience -->
+          <div class="reveal">
+            <h2 class="text-2xl font-bold text-coral mb-8 flex items-center" style="font-family: var(--font-heading);">
+              <span class="w-8 h-1 bg-coral rounded mr-3"></span>
+              Experience
+            </h2>
+
+            <div class="space-y-8">
+              <!-- The Weather Channel -->
+              <div class="timeline-item pb-8">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold">On-Camera Meteorologist</h3>
+                  <span class="text-coral font-semibold">2022 - 2024</span>
+                </div>
+                <p class="text-teal font-semibold mb-3">The Weather Channel</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Anchor of morning shows reaching millions of viewers nationwide
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Covered severe storms including hurricanes in studio and field locations
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Led team on storm coverage for hurricanes, severe weather, and snow events
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Telemundo -->
+              <div class="timeline-item pb-8">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <div class="flex items-center gap-3">
+                    <h3 class="text-xl font-bold">TV Meteorologist</h3>
+                    <span class="emmy-badge text-xs font-bold px-2 py-1 rounded-full">Emmy Winner</span>
+                  </div>
+                  <span class="text-coral font-semibold">2015 - 2018</span>
+                </div>
+                <p class="text-teal font-semibold mb-3">Telemundo 39</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Presented daily weather forecasts for Spanish-speaking audiences
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Produced advanced 3D graphics using IBM WSI: Max Reality, Social, Storm tracking, and Radar
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Led severe weather coverage planning and coordinated news reporter locations
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Managed radar truck positioning based on weather conditions
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Univision -->
+              <div class="timeline-item">
+                <div class="flex flex-wrap justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold">TV Meteorologist</h3>
+                  <span class="text-coral font-semibold">2014 - 2015</span>
+                </div>
+                <p class="text-teal font-semibold mb-3">Univision 23</p>
+                <ul class="space-y-2 text-charcoal/70">
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Forecasted, produced graphics, and presented weather Monday to Friday mornings
+                  </li>
+                  <li class="flex items-start">
+                    <span class="w-2 h-2 bg-coral rounded-full mt-2 mr-3 shrink-0"></span>
+                    Used Weather Central: Fusion: Live, 3D Live, ESP: Radar systems
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-8">
+          <!-- Education -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-coral mb-4" style="font-family: var(--font-heading);">
+              Education
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <p class="font-semibold">Double Bachelor of Science</p>
+                <p class="text-sm text-charcoal/60">Atmospheric Science & Mathematics</p>
+                <p class="text-sm text-coral">University of Miami</p>
+                <p class="text-xs text-charcoal/50">2011 - 2014</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-coral mb-4" style="font-family: var(--font-heading);">
+              Expertise
+            </h2>
+            <div class="flex flex-wrap gap-2">
+              <span class="skill-tag text-xs">Live Broadcasting</span>
+              <span class="skill-tag text-xs">Weather Forecasting</span>
+              <span class="skill-tag text-xs">Hurricane Coverage</span>
+              <span class="skill-tag text-xs">Crisis Communication</span>
+              <span class="skill-tag text-xs">3D Graphics Production</span>
+              <span class="skill-tag text-xs">IBM WSI Max Reality</span>
+              <span class="skill-tag text-xs">Weather Central Fusion</span>
+              <span class="skill-tag text-xs">Team Leadership</span>
+              <span class="skill-tag text-xs">Public Speaking</span>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="reveal bg-gradient-hero p-6 rounded-2xl">
+            <h2 class="text-xl font-bold text-coral mb-4" style="font-family: var(--font-heading);">
+              Languages
+            </h2>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">English</span>
+                  <span class="text-xs text-charcoal/60">Fluent</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-coral rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Spanish</span>
+                  <span class="text-xs text-charcoal/60">Native</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-teal rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium">Arabic</span>
+                  <span class="text-xs text-charcoal/60">Learning</span>
+                </div>
+                <div class="h-2 bg-white rounded-full overflow-hidden">
+                  <div class="h-full bg-gold rounded-full" style="width: 30%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download / Print -->
+          <div class="reveal">
+            <button onclick="window.print()" class="w-full btn-primary flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+              </svg>
+              Print Resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Resumes CTA -->
+  <section class="py-16 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h3 class="text-2xl font-bold mb-8" style="font-family: var(--font-heading);">
+        Explore Other Resume Versions
+      </h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="/resume-tech" class="btn-secondary">
+          Technology & Agile
+        </a>
+        <a href="/resume-educator" class="px-6 py-3 rounded-full font-semibold border-2 transition-all hover:-translate-y-1" style="border-color: #9B59B6; color: #9B59B6;">
+          Education
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @media print {
+    nav, footer, section:last-child {
+      display: none !important;
+    }
+  }
+</style>
