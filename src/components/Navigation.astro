@@ -47,8 +47,8 @@ const navLinks = [
                 </button>
                 <div class="absolute right-0 top-full mt-2 w-32 bg-[#0a0a0a] border border-gold/30 rounded shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-right z-50">
                     {Object.entries(languages).map(([code, label]) => (
-                        <a 
-                          href={code === 'en' ? '/website/' : `/website/${code}/`} 
+                        <a
+                          href={code === 'en' ? `${base}` : `${base}${code}/`}
                           class="lang-select block px-4 py-2 text-sm text-silver hover:text-gold hover:bg-white/5 transition-colors"
                           data-lang={code}
                         >
@@ -106,9 +106,9 @@ const navLinks = [
       <div class="flex flex-col gap-3">
          <span class="text-silver text-sm">Language</span>
          <div class="flex gap-2">
-            <a href="/website/" class="lang-select px-3 py-1 text-xs border border-gold/50 text-gold rounded" data-lang="en">EN</a>
-            <a href="/website/es/" class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="es">ES</a>
-            <a href="/website/ar/" class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="ar">AR</a>
+            <a href={`${base}`} class="lang-select px-3 py-1 text-xs border border-gold/50 text-gold rounded" data-lang="en">EN</a>
+            <a href={`${base}es/`} class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="es">ES</a>
+            <a href={`${base}ar/`} class="lang-select px-3 py-1 text-xs border border-white/10 text-gray-500 rounded" data-lang="ar">AR</a>
          </div>
       </div>
 
@@ -195,7 +195,7 @@ const navLinks = [
   // 2. Redirect on Load if Language Mismatch
   const savedLang = localStorage.getItem('preferred_lang');
   const path = window.location.pathname;
-  const basePath = '/website/';
+  const basePath = '/milmar/';
 
   // Only redirect if there's a saved preference AND it differs from current page language
   if (savedLang && savedLang !== currentLang) {
