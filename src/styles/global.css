@@ -18,10 +18,10 @@
 
   --color-broadcast: #C17E60;
   /* Muted Bronze */
-  --color-tech: #4A6E69;
-  /* Muted Emerald */
-  --color-educator: #6B5B95;
-  /* Muted Royal Purple */
+  --color-tech: #6ECFB8;
+  /* Soft Teal - visible but not too bright */
+  --color-educator: #9B8AC4;
+  /* Bright Lavender Purple */
 }
 
 :root {

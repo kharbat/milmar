@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import EmailCopy from '../components/EmailCopy.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -42,7 +43,7 @@ const base = import.meta.env.BASE_URL;
           </div>
 
           <div class="flex flex-col sm:flex-row gap-5">
-            <a href="#about" class="btn-primary text-center">
+            <a href="resume-broadcast#on-air" class="btn-primary text-center">
               Meet Milmar
             </a>
             <a href="#resumes" class="btn-secondary text-center">
@@ -91,7 +92,7 @@ const base = import.meta.env.BASE_URL;
         <!-- Main Content -->
         <div class="lg:col-span-7 reveal">
           <h2 class="text-4xl text-white mb-8" style="font-family: var(--font-heading);">
-            Precision. Passion. <br/><span class="text-gold">Performance.</span>
+            Bridging <span class="text-gold">Knowledge</span> and <span class="text-gold">People.</span>
           </h2>
 
           <div class="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
@@ -180,7 +181,7 @@ const base = import.meta.env.BASE_URL;
           </div>
           
           <h3 class="text-2xl text-white mb-2 group-hover:text-gold transition-colors" style="font-family: var(--font-heading);">
-            Meteorology
+            TV Broadcast & News
           </h3>
           <p class="text-xs text-gold uppercase tracking-widest mb-6">Meteorologist</p>
 
@@ -246,6 +247,180 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
+  <!-- Video Carousel -->
+  <section class="py-20 bg-charcoal relative overflow-hidden">
+    <div class="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: var(--font-heading);">
+          <span class="text-gold">On-Air</span> Highlights
+        </h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Watch my weather forecasts and live coverage from The Weather Channel, Telemundo, and Univision.</p>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="relative reveal">
+        <!-- Carousel Track -->
+        <div class="video-carousel overflow-hidden">
+          <div class="carousel-track flex transition-transform duration-500 ease-out" id="carouselTrack">
+            <!-- Video 1 - Featured -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/zbMdX7bAzU4"
+                  title="Milmar Ramirez - Featured 1"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <!-- Video 2 - Featured -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/Viz21QIEJiI"
+                  title="Milmar Ramirez - Featured 2"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/vwBAm352bQY"
+                  title="Milmar Ramirez - Broadcast 1"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <!-- Video 4 -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/BLMEajmpyKM"
+                  title="Milmar Ramirez - Broadcast 2"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/cYmrZoI3K7k"
+                  title="Milmar Ramirez - Broadcast 3"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+            <!-- Video 4 -->
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe
+                  class="w-full h-full"
+                  src="https://www.youtube-nocookie.com/embed/yjCqEYCuMDM"
+                  title="Milmar Ramirez - Broadcast 4"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button
+          id="carouselPrev"
+          class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 bg-obsidian/80 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-black hover:border-gold transition-all z-10"
+          aria-label="Previous video"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          id="carouselNext"
+          class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 bg-obsidian/80 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-black hover:border-gold transition-all z-10"
+          aria-label="Next video"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <!-- Dots Indicator -->
+        <div class="flex justify-center gap-2 mt-6" id="carouselDots">
+          <button class="carousel-dot w-2 h-2 rounded-full bg-gold" data-index="0" aria-label="Go to slide 1"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="1" aria-label="Go to slide 2"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="2" aria-label="Go to slide 3"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="3" aria-label="Go to slide 4"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="4" aria-label="Go to slide 5"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="5" aria-label="Go to slide 6"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Video Carousel
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    let currentSlide = 0;
+    const totalSlides = 6;
+
+    function updateCarousel() {
+      if (track) {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('bg-gold', index === currentSlide);
+        dot.classList.toggle('bg-white/30', index !== currentSlide);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentSlide = parseInt(dot.dataset.index || '0');
+        updateCarousel();
+      });
+    });
+  </script>
+
   <!-- Contact CTA -->
   <section class="py-24 relative overflow-hidden">
      <!-- Background with gradient -->
@@ -253,19 +428,16 @@ const base = import.meta.env.BASE_URL;
      
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <h2 class="text-4xl font-bold text-white mb-6 reveal" style="font-family: var(--font-heading);">
-        Ready to Collaborate?
+        Get in Touch
       </h2>
       <p class="text-silver mb-10 text-lg reveal delay-100 font-light">
-        Available for broadcast, agile leadership, and speaking engagements.
+        I'd love to hear from you.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-200">
-        <a
-          href="mailto:milmarramirez0618@gmail.com"
-          class="btn-primary"
-        >
-          milmarramirez0618@gmail.com
-        </a>
+        <EmailCopy class="btn-primary">
+          milmarramirez0618 [@] gmail.com
+        </EmailCopy>
         <a
           href="https://www.linkedin.com/in/milmarramirez/"
           target="_blank"

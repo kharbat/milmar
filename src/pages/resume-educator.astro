@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import EmailCopy from '../components/EmailCopy.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -47,12 +48,12 @@ const base = import.meta.env.BASE_URL;
           <p class="text-xl text-silver mb-8 font-light">Math & Science Specialist | Bilingual Communicator</p>
 
           <div class="flex flex-wrap gap-6 justify-center md:justify-start text-sm">
-            <a href="mailto:milmarramirez0618@gmail.com" class="flex items-center text-gray-400 hover:text-educator transition-colors group">
+            <EmailCopy class="flex items-center text-gray-400 hover:text-educator transition-colors group">
               <span class="p-2 bg-white/5 rounded-full mr-3 group-hover:bg-educator/20 transition-colors">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
               </span>
               Email Me
-            </a>
+            </EmailCopy>
             <a href="https://www.linkedin.com/in/milmarramirez/" target="_blank" rel="noopener noreferrer" class="flex items-center text-gray-400 hover:text-educator transition-colors group">
                <span class="p-2 bg-white/5 rounded-full mr-3 group-hover:bg-educator/20 transition-colors">
                   <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -71,6 +72,31 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
+  <!-- Featured Video -->
+  <section class="py-16 bg-obsidian border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8 reveal">
+        <h2 class="text-3xl font-bold text-white mb-4" style="font-family: var(--font-heading);">
+          In the <span class="text-educator">Classroom</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">Where science meets storytelling.</p>
+      </div>
+      <div class="reveal">
+        <div class="group relative aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/5 hover:border-educator/50 transition-colors">
+          <iframe
+            class="w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/vwBAm352bQY"
+            title="Milmar Ramirez - Science Education"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Main Content -->
   <section class="py-16 bg-onyx relative">
     <div class="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-educator/30 to-transparent"></div>
@@ -79,19 +105,27 @@ const base = import.meta.env.BASE_URL;
       <div class="grid lg:grid-cols-3 gap-16">
         <!-- Main Column -->
         <div class="lg:col-span-2 space-y-16">
-          <!-- Profile Summary -->
+          <!-- Why Education -->
           <div class="reveal">
             <h2 class="text-2xl font-bold text-white mb-6 flex items-center" style="font-family: var(--font-heading);">
               <span class="w-12 h-[2px] mr-4" style="background: var(--color-educator);"></span>
-              Professional Profile
+              Why Education
             </h2>
-            <div class="text-gray-300 leading-relaxed text-lg font-light border-l-2 border-white/5 pl-6 py-2">
-              Passionate, teaching-oriented professional who thrives on guiding others through challenges.
-              With a Double Bachelor's degree in Atmospheric Science and Mathematics, combined with over a
-              decade of experience as a TV presenter, I've mastered the art of communicating complex
-              scientific concepts in a clear, relatable way. My ability to educate audiences about weather,
-              risks, and safety during times of crisis demonstrates my commitment to public education and
-              community service. Bilingual in <strong class="text-white">English</strong> and <strong class="text-white">Spanish</strong> with strong organizational skills.
+            <div class="text-gray-300 leading-relaxed text-lg font-light border-l-2 border-educator/30 pl-6 py-2 space-y-4">
+              <p>
+                Teaching has always been at the heart of what I do. Whether explaining a complex weather system to millions
+                of viewers or helping a student grasp a mathematical concept, I find <strong class="text-white">deep fulfillment in those "aha!" moments</strong>.
+              </p>
+              <p>
+                My background in <strong class="text-educator">Atmospheric Science and Mathematics</strong> gives me the technical foundation,
+                but it's my decade of experience translating complex ideas for diverse audiences that makes me effective.
+                I've learned that education isn't about showing what you know—it's about meeting people where they are.
+              </p>
+              <p>
+                I'm passionate about making science and math <strong class="text-white">accessible, engaging, and relevant</strong>.
+                My bilingual abilities allow me to connect with both English and Spanish-speaking learners,
+                breaking down barriers to understanding.
+              </p>
             </div>
           </div>
 
@@ -107,86 +141,81 @@ const base = import.meta.env.BASE_URL;
             </p>
           </div>
 
-          <!-- Work Experience -->
+          <!-- Core Strengths -->
           <div class="reveal">
             <h2 class="text-2xl font-bold text-white mb-8 flex items-center" style="font-family: var(--font-heading);">
               <span class="w-12 h-[2px] mr-4" style="background: var(--color-educator);"></span>
-              Educational Experience
+              Core Strengths
             </h2>
 
-            <div class="space-y-12">
-              <!-- The Weather Channel -->
-              <div class="relative pl-8 border-l border-white/10">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-educator ring-4 ring-onyx"></div>
-                
-                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                  <div>
-                      <h3 class="text-xl font-bold text-white">Science Communicator & Educator</h3>
-                      <p class="text-educator font-medium">The Weather Channel</p>
-                  </div>
-                  <span class="inline-block mt-2 sm:mt-0 px-3 py-1 bg-white/5 rounded text-xs font-mono text-gray-400">2022 - 2024</span>
+            <div class="grid sm:grid-cols-2 gap-6">
+              <!-- Making Complex Simple -->
+              <div class="p-6 bg-charcoal rounded-sm border border-white/5 hover:border-educator/30 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-educator/10 flex items-center justify-center mb-4 group-hover:bg-educator/20 transition-colors">
+                  <svg class="w-6 h-6 text-educator" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
                 </div>
-                
-                <ul class="space-y-3 text-gray-400">
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Educated millions of viewers on weather science, climate patterns, and safety measures
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Translated complex meteorological data into accessible, engaging content
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Led community education during severe weather events, prioritizing public safety
-                  </li>
-                </ul>
+                <h3 class="text-lg font-bold text-white mb-2">Making Complex Simple</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Years of explaining weather science to millions taught me how to break down complex concepts into digestible, memorable lessons.
+                </p>
               </div>
 
-              <!-- Telemundo -->
-              <div class="relative pl-8 border-l border-white/10">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-educator ring-4 ring-onyx"></div>
-                
-                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                  <div>
-                      <h3 class="text-xl font-bold text-white">Bilingual Science Educator</h3>
-                      <p class="text-educator font-medium">Telemundo 39</p>
-                  </div>
-                  <span class="inline-block mt-2 sm:mt-0 px-3 py-1 bg-white/5 rounded text-xs font-mono text-gray-400">2015 - 2018</span>
+              <!-- Bilingual Communication -->
+              <div class="p-6 bg-charcoal rounded-sm border border-white/5 hover:border-educator/30 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-educator/10 flex items-center justify-center mb-4 group-hover:bg-educator/20 transition-colors">
+                  <svg class="w-6 h-6 text-educator" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                  </svg>
                 </div>
-                
-                <ul class="space-y-3 text-gray-400">
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Delivered weather science education to Spanish-speaking communities
-                  </li>
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Created visual learning materials using 3D graphics and interactive displays
-                  </li>
-                </ul>
+                <h3 class="text-lg font-bold text-white mb-2">Bilingual Communication</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Fluent in English and Spanish, I can reach diverse learners and break down language barriers in education.
+                </p>
               </div>
 
-               <!-- Univision -->
-              <div class="relative pl-8 border-l border-white/10">
-                <div class="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-gray-600 ring-4 ring-onyx"></div>
-                
-                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                  <div>
-                      <h3 class="text-xl font-bold text-white">Science Presenter</h3>
-                      <p class="text-educator font-medium">Univision 23</p>
-                  </div>
-                  <span class="inline-block mt-2 sm:mt-0 px-3 py-1 bg-white/5 rounded text-xs font-mono text-gray-400">2014 - 2015</span>
+              <!-- Engaging Presentation -->
+              <div class="p-6 bg-charcoal rounded-sm border border-white/5 hover:border-educator/30 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-educator/10 flex items-center justify-center mb-4 group-hover:bg-educator/20 transition-colors">
+                  <svg class="w-6 h-6 text-educator" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
                 </div>
-                
-                <ul class="space-y-3 text-gray-400">
-                  <li class="flex items-start">
-                    <span class="text-educator mr-3 transform translate-y-[2px]">▸</span>
-                    Developed engaging presentation techniques for science communication
-                  </li>
-                </ul>
+                <h3 class="text-lg font-bold text-white mb-2">Engaging Presentation</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Trained to capture and hold attention on live TV, I bring energy and engagement to every lesson.
+                </p>
+              </div>
+
+              <!-- Patient & Supportive -->
+              <div class="p-6 bg-charcoal rounded-sm border border-white/5 hover:border-educator/30 transition-colors group">
+                <div class="w-12 h-12 rounded-full bg-educator/10 flex items-center justify-center mb-4 group-hover:bg-educator/20 transition-colors">
+                  <svg class="w-6 h-6 text-educator" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">Patient & Supportive</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  I believe every learner can succeed with the right support. I create safe spaces where questions are welcomed.
+                </p>
               </div>
             </div>
+          </div>
+
+          <!-- What I'm Looking For -->
+          <div class="reveal p-8 rounded-sm bg-gradient-to-br from-educator/10 to-transparent border border-educator/20">
+            <h2 class="text-xl font-bold text-white mb-4 flex items-center gap-3" style="font-family: var(--font-heading);">
+              <svg class="w-6 h-6 text-educator" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              What I'm Looking For
+            </h2>
+            <p class="text-gray-300 leading-relaxed">
+              I would be interested in opportunities where I can share my passion for math, science, and effective communication.
+              Whether it's classroom teaching, tutoring, corporate training, or educational content creation—I'm eager to
+              help learners of all ages discover the joy of understanding.
+            </p>
           </div>
         </div>
 

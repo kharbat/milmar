@@ -15,7 +15,7 @@ const emailParts = ['milmarramirez0618', 'gmail', 'com'];
   aria-label="Copy email to clipboard"
 >
   <slot />
-  <span class="email-tooltip hidden absolute -top-8 left-1/2 -translate-x-1/2 bg-gold text-obsidian text-xs px-2 py-1 rounded whitespace-nowrap font-semibold">
+  <span class="email-tooltip hidden absolute -top-10 left-1/2 -translate-x-1/2 bg-gold text-black text-xs px-3 py-1.5 rounded whitespace-nowrap font-semibold z-50 shadow-lg">
     Copied!
   </span>
 </button>
@@ -23,6 +23,10 @@ const emailParts = ['milmarramirez0618', 'gmail', 'com'];
 <style>
   .email-copy {
     position: relative;
+    overflow: visible !important;
+  }
+  .email-tooltip {
+    pointer-events: none;
   }
 </style>
 

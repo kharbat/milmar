@@ -16,7 +16,7 @@ const navLinks = [
 ---
 
 <nav class="fixed top-0 left-0 right-0 z-50 bg-glass-gold transition-all duration-300">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
       <!-- Logo -->
       <a href={base} class="text-2xl font-bold tracking-tight text-white group" style="font-family: var(--font-heading);">
@@ -45,7 +45,7 @@ const navLinks = [
                     {lang}
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </button>
-                <div class="absolute right-0 top-full mt-2 w-32 bg-onyx border border-gold/20 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-right">
+                <div class="absolute right-0 top-full mt-2 w-32 bg-[#0a0a0a] border border-gold/30 rounded shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top-right z-50">
                     {Object.entries(languages).map(([code, label]) => (
                         <a 
                           href={code === 'en' ? '/website/' : `/website/${code}/`} 

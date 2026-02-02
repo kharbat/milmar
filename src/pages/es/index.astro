@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import EmailCopy from '../../components/EmailCopy.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -42,7 +43,7 @@ const base = import.meta.env.BASE_URL;
           </div>
 
           <div class="flex flex-col sm:flex-row gap-5">
-            <a href="#about" class="btn-primary text-center">
+            <a href="../resume-broadcast#on-air" class="btn-primary text-center">
               Conoce a Milmar
             </a>
             <a href="#resumes" class="btn-secondary text-center">
@@ -91,7 +92,7 @@ const base = import.meta.env.BASE_URL;
         <!-- Main Content -->
         <div class="lg:col-span-7 reveal">
           <h2 class="text-4xl text-white mb-8" style="font-family: var(--font-heading);">
-            Precisión. Pasión. <br/><span class="text-gold">Desempeño.</span>
+            Conectando <span class="text-gold">Conocimiento</span> y <span class="text-gold">Personas.</span>
           </h2>
 
           <div class="space-y-6 text-gray-300 font-light text-lg leading-relaxed">
@@ -246,26 +247,111 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
+  <!-- Video Carousel -->
+  <section class="py-20 bg-charcoal relative overflow-hidden">
+    <div class="absolute top-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" style="font-family: var(--font-heading);">
+          Momentos <span class="text-gold">Al Aire</span>
+        </h2>
+        <p class="text-gray-400 max-w-xl mx-auto">Mira mis pronósticos del tiempo y coberturas en vivo de The Weather Channel, Telemundo y Univision.</p>
+      </div>
+
+      <div class="relative reveal">
+        <div class="video-carousel overflow-hidden">
+          <div class="carousel-track flex transition-transform duration-500 ease-out" id="carouselTrack">
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/zbMdX7bAzU4" title="Milmar Ramirez - Destacado 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/Viz21QIEJiI" title="Milmar Ramirez - Destacado 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/vwBAm352bQY" title="Milmar Ramirez - Transmisión 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/BLMEajmpyKM" title="Milmar Ramirez - Transmisión 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/cYmrZoI3K7k" title="Milmar Ramirez - Transmisión 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+            <div class="carousel-slide flex-shrink-0 w-full px-2">
+              <div class="aspect-video bg-obsidian rounded-sm overflow-hidden border border-white/10">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/yjCqEYCuMDM" title="Milmar Ramirez - Transmisión 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button id="carouselPrev" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-10 h-10 bg-obsidian/80 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-black hover:border-gold transition-all z-10" aria-label="Video anterior">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button id="carouselNext" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-10 h-10 bg-obsidian/80 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-gold hover:text-black hover:border-gold transition-all z-10" aria-label="Siguiente video">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+
+        <div class="flex justify-center gap-2 mt-6" id="carouselDots">
+          <button class="carousel-dot w-2 h-2 rounded-full bg-gold" data-index="0" aria-label="Ir a diapositiva 1"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="1" aria-label="Ir a diapositiva 2"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="2" aria-label="Ir a diapositiva 3"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="3" aria-label="Ir a diapositiva 4"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="4" aria-label="Ir a diapositiva 5"></button>
+          <button class="carousel-dot w-2 h-2 rounded-full bg-white/30 hover:bg-white/50 transition-colors" data-index="5" aria-label="Ir a diapositiva 6"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const track = document.getElementById('carouselTrack');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    let currentSlide = 0;
+    const totalSlides = 6;
+
+    function updateCarousel() {
+      if (track) track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('bg-gold', index === currentSlide);
+        dot.classList.toggle('bg-white/30', index !== currentSlide);
+      });
+    }
+
+    prevBtn?.addEventListener('click', () => { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateCarousel(); });
+    nextBtn?.addEventListener('click', () => { currentSlide = (currentSlide + 1) % totalSlides; updateCarousel(); });
+    dots.forEach(dot => { dot.addEventListener('click', () => { currentSlide = parseInt(dot.dataset.index || '0'); updateCarousel(); }); });
+  </script>
+
   <!-- Contact CTA -->
   <section class="py-24 relative overflow-hidden">
      <!-- Background with gradient -->
      <div class="absolute inset-0 bg-gradient-to-tr from-obsidian via-charcoal to-navy/20"></div>
-     
+
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <h2 class="text-4xl font-bold text-white mb-6 reveal" style="font-family: var(--font-heading);">
-        ¿Listo para Colaborar?
+        Ponte en Contacto
       </h2>
       <p class="text-silver mb-10 text-lg reveal delay-100 font-light">
-        Disponible para televisión, liderazgo ágil y conferencias.
+        Me encantaría saber de ti.
       </p>
       
       <div class="flex flex-col sm:flex-row gap-6 justify-center reveal delay-200">
-        <a
-          href="mailto:milmarramirez0618@gmail.com"
-          class="btn-primary"
-        >
-          milmarramirez0618@gmail.com
-        </a>
+        <EmailCopy class="btn-primary">
+          milmarramirez0618 [@] gmail.com
+        </EmailCopy>
         <a
           href="https://www.linkedin.com/in/milmarramirez/"
           target="_blank"

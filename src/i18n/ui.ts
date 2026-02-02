@@ -11,7 +11,7 @@ export const ui = {
         'nav.home': 'Home',
         'nav.meteorology': 'Meteorology',
         'nav.tech': 'Tech',
-        'nav.educator': 'Educator',
+        'nav.educator': 'Education',
         'nav.connect': 'Connect',
         'nav.theme.dark': 'Dark Mode',
         'nav.theme.light': 'Light Mode',
