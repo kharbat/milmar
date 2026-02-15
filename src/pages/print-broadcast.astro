@@ -302,6 +302,64 @@ const base = import.meta.env.BASE_URL;
         font-weight: 600;
       }
 
+      /* Video highlights */
+      .video-section {
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 2px solid #c17e60;
+      }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      .video-thumb {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border: 1px solid #ddd;
+        text-decoration: none;
+      }
+
+      .video-thumb img {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        display: block;
+      }
+
+      .play-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 28px;
+        height: 28px;
+        background: rgba(193, 126, 96, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .play-icon svg {
+        width: 12px;
+        height: 12px;
+        fill: white;
+        margin-left: 2px;
+      }
+
+      .video-label {
+        font-size: 6.5pt;
+        color: #888;
+        text-align: center;
+        padding: 2px 0;
+        text-decoration: none;
+      }
+
       /* Print button - hidden on print */
       .print-actions {
         position: fixed;
@@ -351,7 +409,7 @@ const base = import.meta.env.BASE_URL;
       }
     </style>
   </head>
-  <body>
+  <body style="padding: 20px 28px;">
     <!-- Print / Back buttons -->
     <div class="print-actions">
       <a href={`${base}resume-broadcast`} class="btn-back">
@@ -492,6 +550,26 @@ const base = import.meta.env.BASE_URL;
           <a href="https://www.milmar.info">www.milmar.info</a>
         </div>
       </div>
+    </div>
+
+    <!-- On-Air Highlights -->
+    <div class="video-section">
+      <h2 class="section-title">On-Air Highlights</h2>
+      <div class="video-grid">
+        <a href="https://www.youtube.com/watch?v=S90FZGOSixo" target="_blank" class="video-thumb">
+          <img src="https://img.youtube.com/vi/S90FZGOSixo/mqdefault.jpg" alt="Featured Broadcast 1" />
+          <div class="play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=aLz-Q5dqMgw" target="_blank" class="video-thumb">
+          <img src="https://img.youtube.com/vi/aLz-Q5dqMgw/mqdefault.jpg" alt="Featured Broadcast 2" />
+          <div class="play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+        </a>
+        <a href="https://www.youtube.com/watch?v=BLMEajmpyKM" target="_blank" class="video-thumb">
+          <img src="https://img.youtube.com/vi/BLMEajmpyKM/mqdefault.jpg" alt="Broadcast Segment" />
+          <div class="play-icon"><svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg></div>
+        </a>
+      </div>
+      <div class="video-label">Click thumbnails to watch on YouTube</div>
     </div>
   </body>
 </html>
