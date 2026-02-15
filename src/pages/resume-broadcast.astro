@@ -259,12 +259,12 @@ const base = import.meta.env.BASE_URL;
 
           <!-- Download / Print -->
           <div class="reveal">
-            <button onclick="window.print()" class="w-full btn-secondary group flex items-center justify-center gap-2 border-white/20 hover:border-broadcast hover:text-broadcast text-white">
+            <a href={`${base}print-broadcast`} class="w-full btn-secondary group flex items-center justify-center gap-2 border-white/20 hover:border-broadcast hover:text-broadcast text-white">
               <svg class="w-4 h-4 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
               </svg>
               Print Resume
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -393,34 +393,3 @@ const base = import.meta.env.BASE_URL;
   </section>
 </Layout>
 
-<style>
-  @media print {
-    /* Print optimizations to save ink but keep layout clean */
-    nav, footer, section:last-child {
-      display: none !important;
-    }
-    body {
-       background-color: white !important;
-       color: black !important;
-    }
-    section {
-       background-color: white !important;
-       background: none !important;
-       padding-top: 0 !important;
-       padding-bottom: 2rem !important;
-    }
-    .text-white, .text-silver, .text-gray-300, .text-gray-400 {
-       color: black !important;
-    }
-    .bg-charcoal, .bg-obsidian, .bg-onyx {
-       background-color: transparent !important;
-       border: none !important;
-    }
-    .border-white\/5, .border-white\/10 {
-       border-color: #ddd !important;
-    }
-    h1, h2, h3 {
-       color: black !important;
-    }
-  }
-</style>
